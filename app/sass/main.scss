@@ -1,0 +1,124 @@
+@import "compass/typography";
+@import "compass/utilities";
+@import "compass/css3";
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin transform($str) {
+  -webkit-transform: #{$str};
+  -moz-transform: #{$str};
+  -ms-transform: #{$str};
+  -o-transform: #{$str};
+  transform: #{$str};      
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+//body{padding-top: 45px;width: 100%;}
+.note{padding:15px;font-size: 12px;margin-top: 20px;}
+.ui-tips{font-size: 12px; padding:20px 15px 0;}
+
+.title{
+	padding-left: 15px; 
+    line-height: 45px; 
+    font-size: 16px; 
+    color: #00A5E3;
+    position: fixed;
+    top: 0;
+    height: 45px;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+    text-align: center;
+
+    .title-btn-r{font-size: 14px;right:15px;position: absolute;}
+    .title-btn-l{font-size: 14px;left:15px;position: absolute;}
+}
+
+	.info-content{display:-webkit-box;width:200%;
+		.view{width:100%;
+			@include transition-property(all);
+			@include transition-duration(300ms);
+			@include transition-timing-function(ease-in-out);
+			-webkit-box-flex:1;
+		}
+	}
+
+
+ 
+// “≥√Ê«–ªª∂Øª≠ start
+.slide-from-right {
+
+    &.ng-enter {
+        z-index: 2;
+        -webkit-transform: translateX(100%);
+    }
+
+    &.ng-enter, &.ng-leave {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: #ebedf0;
+        -webkit-transition: all .4s ease-out;
+    }
+
+    &.ng-enter.ng-enter-active {
+        z-index: 2;
+        -webkit-transform: translateX(0);
+    }
+
+
+    &.ng-leave.ng-leave-active {
+        z-index: 1;
+        -webkit-transform: translateX(-100%);
+    }
+
+    & > .slide-from-left.ng-leave.ng-leave-active {
+        -webkit-transform: translateX(-100%);
+    }
+
+}
+
+
+.slide-from-left {
+
+    &.ng-enter {
+        z-index: 2;
+        -webkit-transform: translateX(-100%);
+    }
+
+    &.ng-enter, &.ng-leave {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: #ebedf0;
+        -webkit-transition: all .4s ease-out;
+    }
+
+    &.ng-enter.ng-enter-active {
+        z-index: 2;
+        -webkit-transform: translateX(0);
+    }
+
+
+    &.ng-leave.ng-leave-active {
+        z-index: 1;
+        -webkit-transform: translateX(100%);
+    }
+
+    & > .slide-from-right.ng-leave.ng-leave-active {
+        -webkit-transform: translateX(100%);
+    }
+}
+// “≥√Ê«–ªª∂Øª≠ end

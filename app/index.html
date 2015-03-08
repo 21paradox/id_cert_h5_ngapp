@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+
+    <!-- UC默认竖屏 ，UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <!-- QQ强制竖屏 QQ强制全屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta name="keywords" content="教育卡身份认证">
+    <meta name="author" content="alainzhang">
+    <meta name="description" content="教育卡身份认证">
+
+    <link rel="apple-touch-icon-precomposed" href="">
+
+  <link href="bower_components/frozenui/1.2.1/css-debug/frozen.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+    <h2 class="title ui-border-b"></h2> <!-- 请勿删除-->
+
+    <div ng-class="animateCss" id="view-wrap">
+        <div ng-view ng-class="animateCss"></div>
+    </div>
+
+    <div>Angular seed app: v<span app-version></span></div>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="view2/zhengjian.js"></script>
+
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+
+</body>
+</html>
