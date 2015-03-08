@@ -11,33 +11,33 @@
         <form action="#">
             <div class="ui-form-item ui-border-b">
                 <label for="#">姓名</label>
-                <input type="text" placeholder="请输入您的姓名">
+                <input type="text" placeholder="请输入您的姓名" ng-model="zhengjian.name">
                 <a href="#" class="ui-icon-close"></a>
             </div>
-            <div class="ui-form-item ui-form-item-link ui-border-b" id="idType">
+            <div class="ui-form-item ui-form-item-link ui-border-b" id="idType" ng-click="editZhengjian()">
                 <label for="#">证件类型</label>
-                <input type="text" placeholder="请选择您的证件类型" readonly>
+                <input type="text" placeholder="请选择您的证件类型" readonly ng-model="zhengjian.type">
             </div>
             <div class="ui-form-item ui-border-b">
                 <label for="#">证件号码</label>
-                <input type="text" placeholder="请输入您的证件号码">
+                <input type="text" placeholder="请输入您的证件号码" ng-model="zhengjian.number">
                 <a href="#" class="ui-icon-close"></a>
             </div>
             <div class="ui-form-item ui-border-b">
                 <label for="#">性别</label>
-                <input type="text" placeholder="女">
+                <input type="text" placeholder="女" ng-model="zhengjian.sex">
             </div>
             <div class="ui-form-item ui-border-b">
                 <label for="#">出生日期</label>
-                <input type="text" placeholder="1994-01-05">
+                <input type="text" placeholder="1994-01-05" ng-model="zhengjian.born">
             </div>
             <div class="ui-form-item ui-border-b">
                 <label for="#">联系号码</label>
-                <input type="text" placeholder="15000819123">
+                <input type="text" placeholder="15000819123" ng-model="zhengjian.tel">
             </div>
             <div class="ui-form-item ui-border-b">
                 <label for="#">电子邮箱</label>
-                <input type="text" placeholder="igo903@hotmail.com">
+                <input type="text" placeholder="igo903@hotmail.com" ng-model="zhengjian.email">
             </div>
         </form>
     </div>
@@ -46,7 +46,7 @@
         <form action="#">
             <div class="ui-form-item ui-form-item-show ui-border-b">
                 <label for="#">学校</label>
-                <input type="text" placeholder="武汉市第二中学" readonly>
+                <input type="text" placeholder="武汉市第二中学" readonly ng-model="zhengjian.school">
             </div>
             <div class="ui-form-item ui-form-item-show ui-border-b">
                 <label for="#">年级</label>

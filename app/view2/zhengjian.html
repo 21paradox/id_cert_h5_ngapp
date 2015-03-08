@@ -4,15 +4,14 @@
 </h2>
 
 <div class="view" id="idTypeView">
-    <ul class="ui-list ui-list-text ui-list-active ui-border-tb">
-        <li class="ui-border-t selected">
-            <p>身份证</p>
-        </li>
-        <li class="ui-border-t">
-            <p>回乡证</p>
-        </li>
-        <li class="ui-border-t">
-            <p>港澳台</p>
+    <ul class="ui-list ui-list-text ui-list-active ui-border-tb" ng-repeat="type in typeList">
+        <li class="ui-border-t "
+            ng-click="chooseZj(type)"
+            ng-class="{
+            'ui-form-item-link' : type == zhengjian.type,
+            'selected': type == zhengjian.type
+            }">
+            <p>{{type}}</p>
         </li>
     </ul>
 </div>

@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp" class="no-js">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+
+    <!-- UC默认竖屏 ，UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <!-- QQ强制竖屏 QQ强制全屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta name="keywords" content="&#x6559;&#x80B2;&#x5361;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;">
+    <meta name="author" content="alainzhang">
+    <meta name="description" content="&#x6559;&#x80B2;&#x5361;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;">
+
+    <link rel="apple-touch-icon-precomposed" href="">
 
   
   
@@ -13,20 +31,23 @@
 <link rel="stylesheet" href="app.full.min.css">
 <script src="app.full.min.js" async></script></head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
 
-  <div ng-view=""></div>
+    <h2 class="title ui-border-b"></h2> <!-- 请勿删除-->
 
-  <div>Angular seed app: v<span app-version=""></span></div>
+    <div ng-class="animateCss" id="view-wrap">
+        <div ng-view="" ng-class="animateCss"></div>
+    </div>
+
+    <div>Angular seed app: v<span app-version=""></span></div>
 
   
   
   
   
   
+  
+  
+
   
   
   

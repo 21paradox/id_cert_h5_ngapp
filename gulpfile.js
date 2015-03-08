@@ -10,8 +10,10 @@ var cheerio = require('cheerio');   //改变dom结构
 
 gulp.task('build', function () {
 
-    var ngCacheStream = gulp.src(['app/!(bower_components)/**/*.html', 'app/*.html'])
-                        .pipe(templateCache());
+    var ngCacheStream = gulp.src(['app/!(bower_components)/**/*.html', '!app/*.html'])
+                        .pipe(templateCache('templates.js', {
+                            module: 'myApp'
+                        }));
 
     var jsStream = domSrc({
         file: 'app/index.html',

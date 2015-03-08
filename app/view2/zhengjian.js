@@ -11,12 +11,20 @@
 }])
 
 
-.controller('zhengjianCtrl', ['$scope','$window', function ($scope, $window) {
+.controller('zhengjianCtrl', ['$scope', '$window', 'zhengjian', function ($scope, $window, zhengjian) {
 
 
     $scope.confirm = function () {
         $window.history.back();
     }
+
+    $scope.zhengjian = zhengjian;
+
+    $scope.typeList = ['身份证', '回乡证', '港澳台'];
+
+    $scope.chooseZj = function (type) {
+        $scope.zhengjian.type = type;
+    };
 
 
 }]);
